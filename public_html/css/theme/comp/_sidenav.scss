@@ -1,0 +1,142 @@
+.sidebar-heading, .sidebar-footer{
+    display: none;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+
+    .sidebar-nav{
+        height: 100%;
+        position: fixed;
+        width: $sidenav-width;
+        -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        -o-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        background: #eee;
+        z-index: 999;
+
+        > .navbar{
+            border: none !important;
+            -webkit-box-shadow: inset 0px 8px 11px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: inset 0px 8px 11px -12px rgba(0,0,0,0.75);
+            box-shadow: inset 0px 8px 11px -12px rgba(0,0,0,0.75);
+        }
+
+        
+
+        .sidebar-heading{
+            display: block;
+            background: #fff;
+            padding: 17px;
+            width: 100%;
+            color: #888;
+
+            >h3{
+                margin-top:0;
+                margin-bottom:0;
+            }
+
+            > h3, p{
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 1.5px;
+                font-size: 21px;
+            }
+
+            >p{
+                font-style: italic;
+                font-size: 12px;
+            }
+        }
+
+        > .sidebar-footer{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            padding: 0 20px;
+            width: 100%;
+            color: #888;
+            height: 55px;
+            box-shadow: -2px -1px 7px -2px rgba(0,0,0,0.35);
+            -webkit-box-shadow: -2px -1px 7px -2px rgba(0,0,0,0.35);
+            -o-box-shadow: -2px -1px 7px -2px rgba(0,0,0,0.35);
+
+            > img{
+                width: 40px;
+                float: left;
+                margin-top: 7.5px;
+                border-radius: 50%;
+                -webkit-box-shadow: inset -7px -7px 56px -12px rgba(0,0,0,0.75);
+                -moz-box-shadow: inset -7px -7px 56px -12px rgba(0,0,0,0.75);
+                box-shadow: inset -7px -7px 56px -12px rgba(0,0,0,0.75);
+            }
+
+            > .close-session{
+                padding-top: 10px;
+                padding-left: 50px;
+
+                >h5{
+                    margin: 0;
+                    font-weight: 400;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                >a{
+                    font-size: 12px;
+                    font-family: 'Roboto', sans-serif;
+                    background: $brand-primary;
+                    color: #fff;
+                    padding: 1px 6px;
+                    border-radius: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .sidebar-nav .navbar .navbar-collapse {
+      padding: 0;
+      max-height: none;
+    }
+    .sidebar-nav .navbar ul {
+      float: none;
+      display: block;
+
+      > li{
+        float: none;
+        display: block;
+
+        > a{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 25px;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #888;
+
+            >i{
+                margin-right: 10px; 
+            }
+
+            &:hover{
+                background-color: #fbfbfb;
+                color: $brand-primary;
+                padding-left: 30px;
+            }
+
+            &:first-child{
+                &:hover{
+                    -webkit-box-shadow: inset 0px 8px 11px -12px rgba(0,0,0,0.75);
+                    -moz-box-shadow: inset 0px 8px 11px -12px rgba(0,0,0,0.75);
+                    box-shadow: inset 0px 8px 11px -12px rgba(0,0,0,0.75);
+                }
+            }
+        }
+      }
+    }
+  }

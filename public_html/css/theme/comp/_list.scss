@@ -1,0 +1,126 @@
+/*mobile styles*/
+.zuno-list{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+
+    > .zuno-list-heading{
+        display: block;
+        background: #fff;
+        padding: 20px;
+        width: 100%;
+        color: #888;
+        z-index: 998;
+        -moz-box-shadow: -1px 1px 6px -1px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -1px 1px 6px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 1px 6px -1px rgba(0,0,0,0.75);
+        box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.25);
+        height: $heading-height;
+
+        >h3{
+            margin-top:0;
+            margin-bottom:0;
+        }
+
+        > h3, p{
+            font-weight: 300;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 0;
+        }
+
+        >p{
+            font-style: italic;
+            font-size: 12px;
+        }
+    }
+
+
+    .zuno-list-body{
+        height: calc(100% - #{$footer-height});
+        top: 0;
+        position: absolute;
+        width: 100%;
+        overflow: auto;
+    }
+
+    > .zuno-list-footer{
+        width: 100%;
+        height: $footer-height;
+        background: #eee;
+        border-top:solid 1px #ddd;
+        bottom: 0;
+        position: absolute;
+
+        > nav {
+            text-align: center;
+            > ul{
+                margin: 10px 0 0 0;
+            }
+        }
+    }
+}
+
+/* desktop and large screens styles */ 
+@media (min-width: 768px) {
+    .zuno-list{
+        width: calc(100% - #{$sidenav-width});
+        left: $sidenav-width;
+    }
+
+}
+
+.zuno-table{
+    background: #fff;
+
+    > thead{
+        > tr{
+            > th{
+                color: $brand-primary;
+                border-bottom-width: 1px !important;
+            }
+        }
+    }
+
+    > tbody{
+
+        > .active{
+            background-color: rgba(0, 48, 135, 0.15) !important;
+            color:$brand-primary;
+        }
+
+        >tr{
+            color: #888;
+            &:hover{
+                background-color: rgba(0, 48, 135, 0.15);
+                color:$brand-primary;
+            }
+        }
+    }
+}
+
+.table-options-h{
+    padding:12px 0px 8px 0 !important;
+
+    > .table-options{
+        display: block;
+        > .form > .form-group > input[type='text']{
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+    }
+
+    > .results-length{
+        display: block;
+        width:  100%;
+        padding: 2px 15px;
+
+        >span{
+            color:  #888;
+            font-size: 10px;
+            font-style:  italic;
+            font-weight: 400;
+        }
+    }
+}
