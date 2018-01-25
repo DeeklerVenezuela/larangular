@@ -9,6 +9,7 @@
      <!-- CSS app dependencies -->
      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
     <link type="text/css" rel="stylesheet" href="{{asset('css/theme/app.theme.css')}}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{asset('node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">    
 
     <!--Let browser know website is optimized for mobile-->
@@ -37,8 +38,8 @@
                     <div class="navbar-collapse collapse sidebar-navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#"><i class="ion-person"></i> Usuarios</a></li>
-                        <li class="active"><a href="#"><i class="ion-android-plane"></i>Vacaciones</a></li>
-                        <li><a href="permits"><i class="ion-android-document"></i> Licencias</a></li>
+                        <li class="active"><a href="{{asset('/permits')}}"><i class="ion-android-plane"></i>Vacaciones</a></li>
+                        <li><a href="#"><i class="ion-android-document"></i> Licencias</a></li>
                         <li><a href="#"><i class="ion-cash"></i>Mis Ingresos</a></li>
                         <li><a href="#"><i class="ion-folder"></i> Otra Documentación</a></li>
                     </ul>
@@ -60,7 +61,9 @@
 
     <!-- JS app dependencies -->
     <script type="text/javascript" src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('node_modules/angular/angular.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
 
     <!-- APP components -->
     <script type="text/javascript" src="{{asset('/js/client/app.js')}}"></script>

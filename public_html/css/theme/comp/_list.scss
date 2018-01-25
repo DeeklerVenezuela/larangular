@@ -1,5 +1,5 @@
 /*mobile styles*/
-.zuno-list{
+.zuno-layout{
     position: absolute;
     width: 100%;
     left: 0;
@@ -17,6 +17,11 @@
         -moz-box-shadow: -1px 1px 6px -1px rgba(0,0,0,0.75);
         box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.25);
         height: $heading-height;
+
+
+        >h2{
+            margin-top:0;
+        }
 
         >h3{
             margin-top:0;
@@ -37,19 +42,40 @@
 
 
     .zuno-list-body{
-        height: calc(100% - #{$footer-height});
-        top: 0;
+        height: calc(100% - #{$footer-height} - #{$heading-height});
+        top:  #{$heading-height};
         position: absolute;
         width: 100%;
         overflow: auto;
+
+        >.content{
+            padding: 15px;
+        }
+
+        .table-responsive{
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 35px);
+            overflow: hidden;
+        }
     }
 
     > .zuno-list-footer{
+        nav{
+            ul{
+                margin: 0 !important;
+            }
+        }
+    }
+
+    > .zuno-list-footer, form > .zuno-list-footer, .form > .zuno-list-footer{
         width: 100%;
         height: $footer-height;
         background: #eee;
         border-top:solid 1px #ddd;
         bottom: 0;
+        text-align: center;
+        padding-top: 10px;
         position: absolute;
 
         > nav {
@@ -63,7 +89,7 @@
 
 /* desktop and large screens styles */ 
 @media (min-width: 768px) {
-    .zuno-list{
+    .zuno-layout{
         width: calc(100% - #{$sidenav-width});
         left: $sidenav-width;
     }
@@ -78,6 +104,10 @@
             > th{
                 color: $brand-primary;
                 border-bottom-width: 1px !important;
+
+                &:first-child{
+                    border-left: none !important;
+                }
             }
         }
     }
@@ -95,32 +125,44 @@
                 background-color: rgba(0, 48, 135, 0.15);
                 color:$brand-primary;
             }
+
+            >td{
+                vertical-align: middle !important;
+
+                &:first-child{
+                    border-left: none !important;
+                }
+            }
         }
     }
 }
 
-.table-options-h{
-    padding:12px 0px 8px 0 !important;
+.table-options{
 
-    > .table-options{
-        display: block;
-        > .form > .form-group > input[type='text']{
-            width: 100%;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-        }
+    > .form > .form-group > input[type='text']{
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
     }
 
-    > .results-length{
-        display: block;
-        width:  100%;
-        padding: 2px 15px;
-
-        >span{
-            color:  #888;
-            font-size: 10px;
-            font-style:  italic;
-            font-weight: 400;
-        }
+    > div > ul{
+        left: -94px;
     }
+}
+
+.results-length{
+    display: block;
+    width:  100%;
+    padding: 2px 15px;
+
+    >span{
+        color:  #888;
+        font-size: 10px;
+        font-style:  italic;
+        font-weight: 400;
+    }
+}
+
+.options-item{
+    padding-left: 0 !important;
 }

@@ -108,8 +108,8 @@ $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Ch
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        0 !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-large:       0 !default;
+$border-radius-small:       0 !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -877,6 +877,6 @@ $hr-border:                   $gray-lighter !default;
 //** Sidenav
 $sidenav-width : 220px;
 
-$heading-height: 83px;
+$heading-height: 77px;
 
 $footer-height: 55px;

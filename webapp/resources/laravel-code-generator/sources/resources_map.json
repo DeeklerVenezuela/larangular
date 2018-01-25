@@ -1,0 +1,7 @@
+[
+    {
+        "model-name": "Permit",
+        "resource-file": "permits.json",
+        "table-name": "permits"
+    }
+]
